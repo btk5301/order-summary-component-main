@@ -19,7 +19,7 @@
     background-size: contain;
     border-radius: 16px 16px 0 0;
     width: 100%;
-    background-image: url("../../../images/illustration-hero.svg");
+    background-image: url("../images/illustration-hero.svg");
 
     @include breakpoint(large) {
       height: rem(195);
