@@ -1,7 +1,7 @@
 @use "../util/" as *;
 
 .background {
-  background-image: url("/images/pattern-background-mobile.svg");
+  background-image: url("../../../images/pattern-background-mobile.svg");
   height: 50%;
   width: 100%;
   background-size: contain;
@@ -9,7 +9,7 @@
   position: absolute;
 
   @include breakpoint(medium) {
-    background-image: url("/images/pattern-background-desktop.svg");
+    background-image: url("../../../images/pattern-background-desktop.svg");
   }
 }
 
