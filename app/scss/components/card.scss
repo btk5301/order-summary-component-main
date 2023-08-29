@@ -1,1 +1,123 @@
 @use "../util/" as *;
+
+.card {
+  max-width: rem(330);
+  width: 100%;
+  border-radius: 16px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.2));
+
+  @include breakpoint(large) {
+    max-width: rem(400);
+  }
+
+  .card__hero {
+    margin-bottom: rem(24);
+    height: rem(160);
+    background-size: contain;
+    border-radius: 16px 16px 0 0;
+    width: 100%;
+    background-image: url("/images/illustration-hero.svg");
+
+    @include breakpoint(large) {
+      height: rem(195);
+    }
+  }
+
+  &__header {
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: rem(16);
+  }
+
+  &__text {
+    padding: 0 rem(30);
+    text-align: center;
+    color: var(--desaturated-blue);
+    margin-bottom: rem(24);
+    line-height: 1.6;
+
+    @include breakpoint(large) {
+      padding: 0 rem(60);
+    }
+  }
+
+  &__first-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text-plan {
+    margin-left: rem(16);
+  }
+
+  &__annual {
+    margin-bottom: 0;
+  }
+  &__price {
+    margin: 0;
+    color: var(--desaturated-blue);
+  }
+
+  &__plan-container {
+    background-color: var(--very-pale-blue);
+    border-radius: 16px;
+    padding: rem(16);
+    margin: 0 rem(20) rem(24) rem(20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(large) {
+      margin: 0 rem(48) rem(20) rem(48);
+    }
+  }
+
+  &__payment {
+    margin: 0 rem(16) rem(20) rem(16);
+    box-shadow: 0 20px 10px -18px hsl(245, 83%, 62%);
+    border-radius: 10px;
+    height: rem(45);
+    background-color: var(--bright-blue);
+    color: white;
+    font-family: var(--font-red-hat-display);
+    font-weight: 700;
+    font-size: rem(14);
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+      background-color: hsla(245, 75%, 52%, 0.521);
+    }
+
+    @include breakpoint(large) {
+      margin: 0 rem(48) rem(20) rem(48);
+    }
+  }
+
+  &__cancel {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: rem(32);
+    color: var(--desaturated-blue);
+    font-weight: 900;
+
+    &:hover {
+      color: var(--dark-blue);
+    }
+  }
+
+  &__cancel-container {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  &__change {
+    &:hover {
+      text-decoration: none;
+      color: hsla(245, 75%, 52%, 0.521);
+    }
+  }
+}
