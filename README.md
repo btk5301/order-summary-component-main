@@ -1,4 +1,4 @@
-# Order summary card Component
+# Responsive Order Summary Card Component
 
 ## Table of contents
 
